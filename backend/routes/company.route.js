@@ -5,10 +5,10 @@ import { singleUpload } from "../middlewares/mutler.js";
 
 const router = express.Router();
 
-router.route("https://mainjobportal.onrender.com/register").post(isAuthenticated,registerCompany);
-router.route("https://mainjobportal.onrender.com/get").get(isAuthenticated,getCompany);
-router.route("https://mainjobportal.onrender.com/get/:id").get(isAuthenticated,getCompanyById);
-router.route("https://mainjobportal.onrender.com/update/:id").put(isAuthenticated,singleUpload, updateCompany);
+router.route("register").post(isAuthenticated,registerCompany);
+router.route("get").get(isAuthenticated,getCompany);
+router.route("get/:id").get(isAuthenticated,getCompanyById);
+router.route("update/:id").put(isAuthenticated,singleUpload, updateCompany);
 
 export default router;
 
